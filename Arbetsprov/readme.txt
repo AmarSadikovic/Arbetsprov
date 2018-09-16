@@ -17,6 +17,7 @@
 ==================
 	- The first search after the API is deployed is slower.
 	- Cross Origin Request, enable Internet Information Services(IIS)
-	Control panel -> Program -> Add/remove Windows Components -> Select IIS check box 
+	Control panel -> Program -> Add/remove Windows Components -> Select IIS check box
+	Delete the hidden .vs file in the project folder and rebuild project
 
 	
