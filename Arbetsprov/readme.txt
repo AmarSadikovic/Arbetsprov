@@ -6,7 +6,7 @@
 ==================
 	1. Open the c# project and compile the project.
 	2. Open up the index.html file with Chrome located in WebbApp folder.
-	3. Input a title inside the input box to search for a specific book containing that title or leave it empty to search for all 		available books.
+	3. Input a title inside the input box to search for a specific book containing that title or leave it empty to search for all available books.
 
 2. Requirements
 ==================
