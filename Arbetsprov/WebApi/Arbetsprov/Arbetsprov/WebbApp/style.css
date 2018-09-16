@@ -1,0 +1,19 @@
+
+.wrapper{
+}
+
+#btnClick{
+  
+    margin-top: 10%;
+}
+.topMargin{
+    margin-top: 5%;
+
+}
+.greenColor{
+background-color: green;
+}
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}

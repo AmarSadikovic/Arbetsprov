@@ -1,0 +1,38 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.wrapper{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#btnClick{
+    margin-top: 10%;
+}
+.topMargin{
+    margin-top: 5%;
+
+}
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+
+.search-result{
+    border:1px solid #FAFAD2;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px ;
+    box-sizing: border-box;
+}
+.search{
+    padding-bottom: 2%;
+    display:none;
+}
+.search-result>h3{
+    font-size: 20px;
+}
+.search-result>p{
+    font-size: 16px;
+}
