@@ -20,7 +20,6 @@ function getBook(title) {
                 cloned.appendTo(".search").find('.publish_date').text("Publish Date: " + data[book].book.publish_date);
                 cloned.appendTo(".search").find('.description').text("Description: " + data[book].book.description);
             }
-
         } else {
             var cloned = $(".search-result:first").clone();
             cloned.appendTo(".search").find('h3').text("No such book found");
@@ -35,4 +34,42 @@ function getBook(title) {
         console.log("error" + data);
     });
 }
+
+$("#btnAddBook").on("click", function () {
+    $(".modal").modal();
+});
+
+$("#formBook").submit(function (event) {
+    
+    var form = $('#formBook').serialize();
+    $.ajax({
+        url: "http://localhost:51555/api/books/",
+        type: "POST",
+        dataType: "JSON",
+        data: form,
+        success: function (data, textStatus, xhr) {
+            console.log("Success: " + data);
+            alert(true);
+        },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log("Error:");
+            alert(false);
+        }
+    });
+    event.preventDefault();
+    $(".modal").modal('toggle');
+});
+
+function alert(success) {
+    if (success) {
+        $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+            $("#success-alert").slideUp(500);
+        });
+    } else {
+        $("#error-alert").fadeTo(2000, 500).slideUp(500, function () {
+            $("#error-alert").slideUp(500);
+        });
+    }
+}
+
 
