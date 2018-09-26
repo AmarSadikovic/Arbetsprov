@@ -31,6 +31,7 @@ function getBook(title) {
         }
         $(".search").show();
     }).fail(function (data) {
+        alert(false);
         console.log("error" + data);
     });
 }
@@ -62,11 +63,11 @@ $("#formBook").submit(function (event) {
 
 function alert(success) {
     if (success) {
-        $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+        $("#success-alert").fadeTo(3000, 500).slideUp(500, function () {
             $("#success-alert").slideUp(500);
         });
     } else {
-        $("#error-alert").fadeTo(2000, 500).slideUp(500, function () {
+        $("#error-alert").fadeTo(3000, 500).slideUp(500, function () {
             $("#error-alert").slideUp(500);
         });
     }

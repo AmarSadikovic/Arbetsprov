@@ -48,7 +48,8 @@ namespace Arbetsprov.Controllers
             newBook.Add(new XElement("description", book.description));
             xDoc.Add(newBook);
             xDoc.Save(filepath);
-            return new HttpResponseMessage(HttpStatusCode.Created);
+            //return new HttpResponseMessage(HttpStatusCode.Created);
+            return Request.CreateResponse(HttpStatusCode.OK);
         }
         
         // PUT: api/Books/5
