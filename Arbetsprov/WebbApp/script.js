@@ -46,7 +46,6 @@ $("#formBook").submit(function (event) {
     $.ajax({
         url: "http://localhost:51555/api/books/",
         type: "POST",
-        dataType: "JSON",
         data: form,
         success: function (data, textStatus, xhr) {
             console.log("Success: " + data);

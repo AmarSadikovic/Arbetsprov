@@ -32,8 +32,8 @@ namespace Arbetsprov.Controllers
             var books = xelement.Elements("book").Where(x => x.Element("title").Value.ToString().ToLower().Contains(id.ToLower()));
             return books;
         }
-  
-        public HttpResponseMessage Post(Book book)
+
+        public IHttpActionResult Post(Book book)
         {
             var xDoc = XElement.Load(filepath);
             var count = xDoc.Descendants("book").Count();
@@ -48,8 +48,7 @@ namespace Arbetsprov.Controllers
             newBook.Add(new XElement("description", book.description));
             xDoc.Add(newBook);
             xDoc.Save(filepath);
-            //return new HttpResponseMessage(HttpStatusCode.Created);
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return Ok();
         }
         
         // PUT: api/Books/5
